@@ -1,5 +1,6 @@
 import os
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'r7r)yo)#)#0pvogidtmy38@f+3ip@3q-w6nwjxhafnl)-9=b$%'
@@ -10,6 +11,7 @@ ALLOWED_HOSTS =[]
 
 
 INSTALLED_APPS =[
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,8 +34,8 @@ ROOT_URLCONF =  'AppDjango.urls '
 
 TEMPLATES = [
     {
-        'BACKEND ': 'django.template.backends.django.Djangotemplates ',
-        'DIRS ':[],
+        'BACKEND ': 'django.template.backends.django.Djangotemplates',
+        'DIRS ':[os.path.join(BASE_DIR,'templates')],
         'APP_DIRS ': True,
         'OPTIONS ': {
             'context_processors':[
